@@ -62,7 +62,7 @@ const activarSonido = () => {
 qrcode.callback = (respuesta) => {
   var hoja = document.getElementById('hoja').value;
   if (respuesta) {
-    var url = 'https://script.google.com/macros/s/AKfycbwhUXQ5EYUn9ZNh5bBatfXtHJTgzw6hWezjovOyDN8v_ZQPAn-MJuYKGkXCFPnk-Aa9HA/exec';
+    var url = 'https://script.google.com/macros/s/AKfycbyHF_P5HRqqlQltT5nml_UQq9-4Ryl_L_GvU8Gn_Wl5KFVwWoCksTHxWq1J3GX-AC55Rw/exec';
     var datos = "qr_data=" + encodeURIComponent(respuesta) + "&sheet=" + encodeURIComponent(hoja);
     fetch(url, {
         method: 'POST',
