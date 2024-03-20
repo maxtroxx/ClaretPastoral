@@ -89,10 +89,7 @@ qrcode.callback = (respuesta) => {
     
   }
 };
-//evento para mostrar la camara sin el boton 
-window.addEventListener('load', (e) => {
-  encenderCamara();
-})
+
 
 
 
