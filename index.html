@@ -1,46 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
+  <title>Inicio - Fundación Claret</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Conexión con Google Sheets</title>
-  <link rel="shortcut icon" href="image (1).png">
-  <link rel="stylesheet" href="assets/css/index.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <script src="assets/plugins/qrCode.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .container {
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+
+    .btn {
+      width: 100%;
+      margin: 10px 0;
+      padding: 15px;
+      font-size: 16px;
+      border-radius: 8px;
+    }
+
+    .btn-asistencia {
+      background-color: #198754;
+      color: white;
+    }
+
+    .btn-mensaje {
+      background-color: #0d6efd;
+      color: white;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+  </style>
 </head>
 <body>
-  <div class="row justify-content-center mt-5">
-    <div class="col-sm-4 shadow p-3">
-      <h5 class="text-center">Escanear codigo QR</h5>
-      <div class="row text-center">
-        <a id="btn-scan-qr" href="#">
-          <img src="agujero (4).png" class="img-fluid text-center" width="175">
-        <a>
-        <canvas hidden="" id="qr-canvas" class="img-fluid"></canvas>
-        </div>
-        <div class="controls">
-          <label for="hoja">Selecciona la hoja:</label>
-          <select id="hoja">
-              <option value="Colmena Marzo">Colmena Marzo</option>
-              <option value="Colmena Abril">Colmena Abril</option>
-              <option value="Colmena Mayo">Colmena Mayo</option>
-              <option value="Colmena Junio">Colmena Junio</option>
-              <option value="Colmena Julio">Colmena Julio</option>
-              <option value="Colmena Agosto">Colmena Agosto</option>
-              <option value="Colmena Septiembre">Colmena Septiembre</option>
-              <option value="Colmena Noviembre">Colmena Noviembre</option>
-              <option value="Colmena Diciembre">Colmena Diciembre</option>
-          </select>
-        </div>
-        <div class="row mx-5 my-3">
-        <button class="btn btn-success btn-sm rounded-3 mb-2" onclick="encenderCamara()">Encender camara</button>
-        <button class="btn btn-danger btn-sm rounded-3" onclick="cerrarCamara()">Detener camara</button>
-      </div>
-    </div>
+  <div class="container">
+    <h2>¿Qué deseas hacer?</h2>
+    <a href="asistencia.html" class="btn btn-asistencia">✅ Marcar asistencia</a>
+    <a href="mensaje.html" class="btn btn-mensaje">✉️ Enviar mensaje</a>
   </div>
-  <audio id="audioScaner" src="assets/sonido.mp3"></audio>
-  <script src="assets/js/index.js"></script>
 </body>
 </html>
